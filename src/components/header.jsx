@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Header = ({
   bgGradient = 'from-brand-purple-dark via-brand-purple-medium to-brand-purple-light',
@@ -6,6 +7,7 @@ const Header = ({
   pageTitle = 'Engineering Services',
   changePage,
 }) => {
+  const navigate = useNavigate()
   const [showWhoWeAre, setShowWhoWeAre] = useState(false)
   const [showWhatWeDo, setShowWhatWeDo] = useState(false)
 
@@ -53,25 +55,25 @@ const Header = ({
 
           <div className="flex items-center gap-6 text-sm">
             <button
-              onClick={() => changePage('investors')}
+              onClick={() => navigate('/investors')}
               className="hover:text-brand-cyan transition-colors"
             >
               Investors
             </button>
             <button
-              onClick={() => changePage('sustainability')}
+              onClick={() => navigate('/sustainability')}
               className="hover:text-brand-cyan transition-colors"
             >
               Sustainability
             </button>
             <button
-              onClick={() => changePage('news')}
+              onClick={() => navigate('/news')}
               className="hover:text-brand-cyan transition-colors"
             >
               News & Notification
             </button>
             <button
-              onClick={() => changePage('join')}
+              onClick={() => navigate('/join')}
               className="hover:text-brand-cyan transition-colors"
             >
               Join
@@ -123,7 +125,7 @@ const Header = ({
                     onClick={() => {
                       setShowWhoWeAre(false)
                       setShowWhatWeDo(false)
-                      changePage('about')
+                      navigate('/about')
                     }}
                     className="block px-4 py-2 hover:bg-gray-100 w-full text-left"
                   >
@@ -133,7 +135,7 @@ const Header = ({
                     onClick={() => {
                       setShowWhoWeAre(false)
                       setShowWhatWeDo(false)
-                      changePage('team')
+                      navigate('/team')
                     }}
                     className="block px-4 py-2 hover:bg-gray-100 w-full text-left"
                   >
@@ -143,7 +145,7 @@ const Header = ({
                     onClick={() => {
                       setShowWhoWeAre(false)
                       setShowWhatWeDo(false)
-                      changePage('values')
+                      navigate('/values')
                     }}
                     className="block px-4 py-2 hover:bg-gray-100 w-full text-left"
                   >
@@ -171,7 +173,7 @@ const Header = ({
                     onClick={() => {
                       setShowWhoWeAre(false)
                       setShowWhatWeDo(false)
-                      changePage('engineering-services')
+                      navigate('/engineering-services')
                     }}
                     className="block px-4 py-2 hover:bg-gray-100 w-full text-left"
                   >
@@ -181,7 +183,7 @@ const Header = ({
                     onClick={() => {
                       setShowWhoWeAre(false)
                       setShowWhatWeDo(false)
-                      changePage('consulting')
+                      navigate('/consulting')
                     }}
                     className="block px-4 py-2 hover:bg-gray-100 w-full text-left"
                   >
@@ -191,7 +193,7 @@ const Header = ({
                     onClick={() => {
                       setShowWhoWeAre(false)
                       setShowWhatWeDo(false)
-                      changePage('projects')
+                      navigate('/projects')
                     }}
                     className="block px-4 py-2 hover:bg-gray-100 w-full text-left"
                   >
@@ -205,7 +207,7 @@ const Header = ({
               onClick={() => {
                 setShowWhoWeAre(false)
                 setShowWhatWeDo(false)
-                changePage('contact')
+                navigate('/contact')
               }}
               className="hover:text-brand-cyan transition-colors text-lg font-medium"
             >
