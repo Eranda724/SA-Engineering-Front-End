@@ -1,9 +1,9 @@
 import React from 'react'
 import Layout from './Layout'
 
-const PlaceholderPage = ({ title, changePage, children }) => {
+const PlaceholderPage = ({ title, children }) => {
   return (
-    <Layout pageTitle={title} changePage={changePage}>
+    <Layout pageTitle={title}>
       <div className="flex items-center justify-center py-24">
         <div className="text-center px-4">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">{title}</h1>

@@ -2,10 +2,10 @@ import React from 'react'
 import Header from './header'
 import Footer from './Footer'
 
-const Layout = ({ pageTitle, changePage, children }) => {
+const Layout = ({ pageTitle, children }) => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
-      <Header pageTitle={pageTitle} changePage={changePage} />
+      <Header pageTitle={pageTitle} />
       <main className="flex-1">{children}</main>
       <Footer />
     </div>

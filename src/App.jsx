@@ -1,47 +1,26 @@
 import './App.css'
-import { useState } from 'react'
+import { Routes, Route, Navigate } from 'react-router-dom'
 import EngineeringServices from './components/engineeringServicesPage'
 import PlaceholderPage from './components/PlaceholderPage'
 
 function App() {
-  const [currentPage, setCurrentPage] = useState('home')
-
-  const changePage = (page) => {
-    setCurrentPage(page)
-  }
-
-  const renderPage = () => {
-    switch (currentPage) {
-      case 'home':
-        return <PlaceholderPage title="Home" changePage={changePage} />
-      case 'about':
-        return <PlaceholderPage title="About Us" changePage={changePage} />
-      case 'team':
-        return <PlaceholderPage title="Our Team" changePage={changePage} />
-      case 'values':
-        return <PlaceholderPage title="Our Values" changePage={changePage} />
-      case 'engineering-services':
-        return <EngineeringServices changePage={changePage} />
-      case 'consulting':
-        return <PlaceholderPage title="Consulting" changePage={changePage} />
-      case 'projects':
-        return <PlaceholderPage title="Projects" changePage={changePage} />
-      case 'contact':
-        return <PlaceholderPage title="Contact Us" changePage={changePage} />
-      case 'sustainability':
-        return <PlaceholderPage title="Sustainability" changePage={changePage} />
-      case 'join':
-        return <PlaceholderPage title="Join" changePage={changePage} />
-      case 'news':
-        return <PlaceholderPage title="News & Notification" changePage={changePage} />
-      case 'investors':
-        return <PlaceholderPage title="Investors" changePage={changePage} />
-      default:
-        return <PlaceholderPage title="Home" changePage={changePage} />
-    }
-  }
-
-  return renderPage()
+  return (
+    <Routes>
+      <Route path="/" element={<PlaceholderPage title="Home" />} />
+      <Route path="/about" element={<PlaceholderPage title="About Us" />} />
+      <Route path="/team" element={<PlaceholderPage title="Our Team" />} />
+      <Route path="/values" element={<PlaceholderPage title="Our Values" />} />
+      <Route path="/engineering-services" element={<EngineeringServices />} />
+      <Route path="/consulting" element={<PlaceholderPage title="Consulting" />} />
+      <Route path="/projects" element={<PlaceholderPage title="Projects" />} />
+      <Route path="/contact" element={<PlaceholderPage title="Contact Us" />} />
+      <Route path="/sustainability" element={<PlaceholderPage title="Sustainability" />} />
+      <Route path="/join" element={<PlaceholderPage title="Join" />} />
+      <Route path="/news" element={<PlaceholderPage title="News & Notification" />} />
+      <Route path="/investors" element={<PlaceholderPage title="Investors" />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
+    </Routes>
+  )
 }
 
 export default App
