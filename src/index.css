@@ -1,6 +1,21 @@
 @import "tailwindcss";
 @theme {
-    --color-primary: #4a90e2;
-    --color-secondary: #50e3c2;
-    --color-accent: #f5a623;
+    /* Header Colors */
+    --color-header-start: #7c3aed; /* purple-700 */
+    --color-header-end: #3b82f6; /* blue-500 */
+    
+    /* Footer Colors - From Figma */
+    --color-footer-start: #C8C8C8;
+    --color-footer-end: #2F2F2F;
+    
+    /* Brand Colors */
+    --color-brand-cyan: #00d4ff;
+    --color-brand-turquoise: #40e0d0;
+    
+    /* Text Colors */
+    --color-text-light: #ffffff;
+    --color-text-dark: #333333;
+    
+    /* Background Colors */
+    --color-bg-light: #f8f9fa;
 }
