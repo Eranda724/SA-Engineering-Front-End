@@ -1,14 +1,14 @@
 // Custom Carousel Component
 import React, { useState, useEffect } from "react";
 
-const CarouselComponent = () => {
+const Carousel = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [imageErrors, setImageErrors] = useState({});
 
   const slides = [
     {
       id: 1,
-      image: "https://images.unsplash.com/photo-1497436072909-f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80",
+      image: "https://lipsum.app/id/24/1600x900",
       title: "Engineering Excellence",
       description: "We provide world-class engineering solutions with innovative approaches and cutting-edge technology to meet your project needs.",
       buttonText: "Learn More"
@@ -137,4 +137,4 @@ const CarouselComponent = () => {
   );
 };
 
-export default CarouselComponent;
+export default Carousel;

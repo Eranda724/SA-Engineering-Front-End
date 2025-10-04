@@ -1,8 +1,10 @@
 import './App.css'
 import { Routes, Route, Navigate } from 'react-router-dom'
-import EngineeringServices from './components/engineeringServicesPage'
-import PlaceholderPage from './components/PlaceholderPage'
-import HomePage from './components/homePage'
+import { 
+  EngineeringServicesPage, 
+  PlaceholderPage, 
+  HomePage 
+} from './components/pages'
 
 function App() {
   return (
@@ -11,7 +13,7 @@ function App() {
       <Route path="/about" element={<PlaceholderPage title="About Us" />} />
       <Route path="/team" element={<PlaceholderPage title="Our Team" />} />
       <Route path="/values" element={<PlaceholderPage title="Our Values" />} />
-      <Route path="/engineering-services" element={<EngineeringServices />} />
+      <Route path="/engineering-services" element={<EngineeringServicesPage />} />
       <Route path="/consulting" element={<PlaceholderPage title="Consulting" />} />
       <Route path="/projects" element={<PlaceholderPage title="Projects" />} />
       <Route path="/contact" element={<PlaceholderPage title="Contact Us" />} />

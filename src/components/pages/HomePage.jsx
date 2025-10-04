@@ -1,5 +1,5 @@
-import CarouselComponent from "./Carousel";
-import Layout from "./Layout";
+import { Carousel } from "../ui";
+import { Layout } from "../common";
 
 export default function HomePage() {
   
@@ -7,7 +7,7 @@ export default function HomePage() {
     <Layout pageTitle="Home">
       <div className="w-full flex flex-col">
         {/* First Section with Image Carousel */}
-        <CarouselComponent />
+        <Carousel />
 
         {/* Second Section */}
         <div className="w-full py-16 bg-amber-50 flex justify-center items-center">
