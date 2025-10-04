@@ -1,39 +1,53 @@
+import CarouselComponent from "./Carousel";
 import Layout from "./Layout";
-import { Carousel, Typography, Button } from "@material-tailwind/react";
 
 export default function HomePage() {
+  
   return (
     <Layout pageTitle="Home">
-      <div className="w-full h-screen flex flex-col">
+      <div className="w-full flex flex-col">
         {/* First Section with Image Carousel */}
-        <div className="w-full h-[50%] bg-gray-200"></div>
+        <CarouselComponent />
+
         {/* Second Section */}
-        <div className="w-full h-[50%] bg-amber-100 flex justify-center items-center">
-          <div className="text-center px-4">
+        <div className="w-full py-16 bg-amber-50 flex justify-center items-center">
+          <div className="text-center px-4 max-w-4xl">
             <h1 className="text-4xl font-bold text-gray-800 mb-4">
-              TRY OUR TEAM OF EXPERTS IN <span className="text-blue-600">LIVERPOOL</span>
+              TRY OUR TEAM OF EXPERTS IN <span className="text-blue-600">ENGINEERING</span>
             </h1>
-            <p className="text-lg mb-6">
-              Aliquam rhoncus ut urna ac vulputate. Aenean sit amet mauris tellus. Suspendisse a condimentum est.
-              Nulla fringilla interdum velit quis vulputate.
+            <p className="text-lg mb-8 text-gray-600">
+              We provide comprehensive engineering solutions with innovative approaches
+              and cutting-edge technology to meet your project needs.
             </p>
-            <div className="flex justify-center space-x-6">
-              <ul>
-                <li>✔️ Every Job Is Guaranteed</li>
-                <li>✔️ Only High Quality Materials</li>
-                <li>✔️ Free Estimates For Any Job</li>
-              </ul>
-              <ul>
-                <li>✔️ Locally Based, Family Run Firm</li>
-                <li>✔️ Trusted 5 Star Rated Company</li>
-                <li>✔️ Insurance Work Undertaken</li>
-              </ul>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+              <div className="text-left">
+                <ul className="space-y-2">
+                  <li className="flex items-center">✔️ Every Project Is Guaranteed</li>
+                  <li className="flex items-center">✔️ Only High Quality Materials</li>
+                  <li className="flex items-center">✔️ Free Estimates For Any Project</li>
+                </ul>
+              </div>
+              <div className="text-left">
+                <ul className="space-y-2">
+                  <li className="flex items-center">✔️ Professional Engineering Team</li>
+                  <li className="flex items-center">✔️ Trusted 5 Star Rated Company</li>
+                  <li className="flex items-center">✔️ Sustainable Solutions</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
         {/* Third Section */}
-        <div className="w-full h-[50%] bg-blue-300"></div>
+        <div className="w-full py-16 bg-blue-100">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Ready to Get Started?</h2>
+            <p className="text-lg text-gray-600 mb-8">Contact us today for a free consultation</p>
+            <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+              Get In Touch
+            </button>
+          </div>
+        </div>
       </div>
     </Layout>
   );
