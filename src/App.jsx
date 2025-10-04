@@ -2,11 +2,12 @@ import './App.css'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import EngineeringServices from './components/engineeringServicesPage'
 import PlaceholderPage from './components/PlaceholderPage'
+import HomePage from './components/homePage'
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<PlaceholderPage title="Home" />} />
+      <Route path="/" element={<HomePage />} />
       <Route path="/about" element={<PlaceholderPage title="About Us" />} />
       <Route path="/team" element={<PlaceholderPage title="Our Team" />} />
       <Route path="/values" element={<PlaceholderPage title="Our Values" />} />
