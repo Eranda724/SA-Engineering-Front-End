@@ -3,7 +3,8 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { 
   EngineeringServicesPage, 
   PlaceholderPage, 
-  HomePage 
+  HomePage, 
+  BoardOfDirectorsPage
 } from './components/pages'
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Route path="/join" element={<PlaceholderPage title="Join" />} />
       <Route path="/news" element={<PlaceholderPage title="News & Notification" />} />
       <Route path="/investors" element={<PlaceholderPage title="Investors" />} />
+      <Route path="/directors" element={<BoardOfDirectorsPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )

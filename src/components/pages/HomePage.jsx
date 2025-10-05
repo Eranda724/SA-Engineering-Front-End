@@ -4,7 +4,7 @@ import { Layout } from "../common";
 export default function HomePage() {
   
   return (
-    <Layout pageTitle="Home">
+    <Layout pageTitle="">
       <div className="w-full flex flex-col">
         {/* First Section with Image Carousel */}
         <Carousel />
