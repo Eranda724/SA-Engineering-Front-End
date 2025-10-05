@@ -37,7 +37,7 @@ const Header = ({
     <header
       className={`w-full ${
         isHome
-          ? 'bg-transparent absolute top-0 left-0 right-0 z-10'
+          ? 'bg-transparent absolute top-0 left-0 right-0 z-50'
           : `bg-gradient-to-b ${bgGradient}`
       } ${headerTextColor} overflow-hidden`}
       style={
@@ -130,7 +130,7 @@ const Header = ({
                 <span className="text-sm">▼</span>
               </button>
               {showWhoWeAre && (
-                <div className="absolute top-full left-0 mt-2 bg-white text-gray-800 rounded shadow-lg py-2 min-w-[150px] z-50">
+                <div className="absolute top-full left-0 mt-2 bg-white text-gray-800 rounded shadow-lg py-2 min-w-[150px] z-[60]">
                   <button
                     onClick={() => {
                       setShowWhoWeAre(false)
@@ -178,7 +178,7 @@ const Header = ({
                 <span className="text-sm">▼</span>
               </button>
               {showWhatWeDo && (
-                <div className="absolute top-full left-0 mt-2 bg-white text-gray-800 rounded shadow-lg py-2 min-w-[180px] z-50">
+                <div className="absolute top-full left-0 mt-2 bg-white text-gray-800 rounded shadow-lg py-2 min-w-[180px] z-[60]">
                   <button
                     onClick={() => {
                       setShowWhoWeAre(false)
