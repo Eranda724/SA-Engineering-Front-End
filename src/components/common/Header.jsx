@@ -42,7 +42,7 @@ const Header = ({
       } ${headerTextColor} overflow-hidden`}
       style={
         isHome
-          ? {}
+          ? { background: 'transparent' }
           : {
               background:
                 'linear-gradient(180deg, #110C4D 0%, #311DA1 22%, #8FABFF 92%)',
