@@ -61,7 +61,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative w-full h-[700px] rounded-xl overflow-hidden">
+    <div className="relative w-full h-screen rounded-xl overflow-hidden">
       {/* Slides Container */}
       
       <div className="relative h-full ">
