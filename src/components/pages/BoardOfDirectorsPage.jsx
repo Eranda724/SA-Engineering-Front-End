@@ -7,7 +7,7 @@ const BoardOfDirectorsPage = () => {
       <div className="flex items-center justify-center py-24">
         <div className="text-center px-4">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">Board of Directors</h1>
-          <p className="text-gray-600">This page is under construction.</p>
+          <p className="text-gray-600">This page is under construction....</p>
         </div>
       </div>
     </Layout>
