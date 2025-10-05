@@ -8,21 +8,21 @@ const Carousel = () => {
   const slides = [
     {
       id: 1,
-      image: "https://lipsum.app/id/24/1600x900",
+      image: "https://picsum.photos/1600/900?random=1",
       title: "Engineering Excellence",
       description: "We provide world-class engineering solutions with innovative approaches and cutting-edge technology to meet your project needs.",
       buttonText: "Learn More"
     },
     {
       id: 2,
-      image: "https://images.unsplash.com/photo-1506748686214-5e2b7ec8422f?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg5MnwwfDF8c2VhcmNofDk1fHxmb3Jlc3R8ZW58MHx8fHw%3D&ixlib=rb-1.2.1&q=80&w=1080",
+      image: "https://picsum.photos/1600/900?random=2",
       title: "Sustainable Solutions",
       description: "Committed to environmental responsibility and sustainable engineering practices for a better tomorrow.",
       buttonText: "Our Services"
     },
     {
       id: 3,
-      image: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80",
+      image: "https://picsum.photos/1600/900?random=3",
       title: "Expert Team",
       description: "Our experienced professionals bring decades of expertise to deliver exceptional results for every project.",
       buttonText: "Meet Our Team"
@@ -50,18 +50,25 @@ const Carousel = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
   };
 
-  const handleImageError = (slideId) => {
+  const handleImageError = (slideId, imageSrc) => {
+    console.log(`Error loading image for slide ${slideId}: ${imageSrc}`);
     setImageErrors(prev => ({ ...prev, [slideId]: true }));
   };
 
+  const handleImageLoad = (slideId) => {
+    console.log(`Successfully loaded image for slide ${slideId}`);
+    setImageErrors(prev => ({ ...prev, [slideId]: false }));
+  };
+
   return (
-    <div className="relative w-full h-[500px] rounded-xl overflow-hidden">
+    <div className="relative w-full h-[700px] rounded-xl overflow-hidden">
       {/* Slides Container */}
-      <div className="relative h-full">
+      
+      <div className="relative h-full ">
         {slides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 transition-opacity duration-500 ${
+            className={`absolute inset-0 transition-opacity duration-500 border-2 border-red-500 ${
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
           >
@@ -77,10 +84,13 @@ const Carousel = () => {
                 src={slide.image}
                 alt={slide.title}
                 className="h-full w-full object-cover"
-                onError={() => handleImageError(slide.id)}
+                onError={() => handleImageError(slide.id, slide.image)}
+                onLoad={() => handleImageLoad(slide.id)}
+                loading="eager"
               />
             )}
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            {/* Temporarily commented out overlay to test image visibility */}
+            {/* <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
               <div className="text-center text-white px-4 max-w-4xl">
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">
                   {slide.title}
@@ -92,10 +102,13 @@ const Carousel = () => {
                   {slide.buttonText}
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         ))}
       </div>
+      {/* Test image - uncomment to test if images load outside carousel */}
+      {/* <img src="https://picsum.photos/1600/900?random=1" alt="Test image" className="w-full h-32 object-cover" /> */}
+      
 
       {/* Navigation Arrows */}
       <button
