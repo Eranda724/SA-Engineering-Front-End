@@ -3,8 +3,8 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { 
   EngineeringServicesPage, 
   PlaceholderPage, 
-  HomePage, 
-  BoardOfDirectorsPage
+  HomePage,
+  OurTeamPage, 
 } from './components/pages'
 
 function App() {
@@ -12,7 +12,6 @@ function App() {
     <Routes>
       <Route path="/" element={<HomePage />} />
       <Route path="/about" element={<PlaceholderPage title="About Us" />} />
-      <Route path="/team" element={<PlaceholderPage title="Our Team" />} />
       <Route path="/values" element={<PlaceholderPage title="Our Values" />} />
       <Route path="/engineering-services" element={<EngineeringServicesPage />} />
       <Route path="/consulting" element={<PlaceholderPage title="Consulting" />} />
@@ -22,7 +21,7 @@ function App() {
       <Route path="/join" element={<PlaceholderPage title="Join" />} />
       <Route path="/news" element={<PlaceholderPage title="News & Notification" />} />
       <Route path="/investors" element={<PlaceholderPage title="Investors" />} />
-      <Route path="/directors" element={<BoardOfDirectorsPage />} />
+      <Route path="/team" element={<OurTeamPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )

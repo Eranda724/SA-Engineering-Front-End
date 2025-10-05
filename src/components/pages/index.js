@@ -1,7 +1,7 @@
 // Page Components
 export { default as HomePage } from './HomePage';
 export { default as EngineeringServicesPage } from './EngineeringServicesPage';
-export { default as BoardOfDirectorsPage } from './BoardOfDirectorsPage';
+export { default as BoardOfDirectorsPage } from './OurTeamPage';
 export { default as BoardCommitteesPage } from './BoardCommitteesPage';
 export { default as ConstructionProjectsPage } from './ConstructionProjectsPage';
 export { default as InvestorsPage } from './InvestorsPage';
