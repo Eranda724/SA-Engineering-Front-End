@@ -37,12 +37,12 @@ const Header = ({
     <header
       className={`w-full ${
         isHome
-          ? 'bg-transparent absolute top-0 left-0 right-0 z-10'
+          ? 'bg-transparent absolute top-0 left-0 right-0 z-50'
           : `bg-gradient-to-b ${bgGradient}`
       } ${headerTextColor} overflow-hidden`}
       style={
         isHome
-          ? {}
+          ? { background: 'transparent' }
           : {
               background:
                 'linear-gradient(180deg, #110C4D 0%, #311DA1 22%, #8FABFF 92%)',
