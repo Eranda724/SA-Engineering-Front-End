@@ -68,7 +68,7 @@ const Carousel = () => {
         {slides.map((slide, index) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 transition-opacity duration-500 border-2 border-red-500 ${
+            className={`absolute inset-0 transition-opacity duration-500 ${
               index === currentSlide ? 'opacity-100' : 'opacity-0'
             }`}
           >
@@ -83,14 +83,14 @@ const Carousel = () => {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover relative z-0"
                 onError={() => handleImageError(slide.id, slide.image)}
                 onLoad={() => handleImageLoad(slide.id)}
                 loading="eager"
               />
             )}
-            {/* Temporarily commented out overlay to test image visibility */}
-            {/* <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center z-10">
+            {/* Overlay with text content - using gradient for better image visibility */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent flex items-center justify-center z-10">
               <div className="text-center text-white px-4 max-w-4xl">
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">
                   {slide.title}
@@ -102,7 +102,7 @@ const Carousel = () => {
                   {slide.buttonText}
                 </button>
               </div>
-            </div> */}
+            </div>
           </div>
         ))}
       </div>
