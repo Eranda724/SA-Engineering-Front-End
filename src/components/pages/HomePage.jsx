@@ -10,16 +10,16 @@ export default function HomePage() {
         <Carousel />
 
         {/* Second Section */}
-        <div className="w-full py-16 bg-amber-50 flex justify-center items-center">
-          <div className="text-center px-4 max-w-4xl">
-            <h1 className="text-4xl font-bold text-gray-800 mb-4">
+        <div className="w-full h-[700px] flex justify-center">
+          <div className="text-center py-15 px-4 max-w-4xl">
+            <h1 className="text-6xl font-bold text-gray-800 mb-4">
               TRY OUR TEAM OF EXPERTS IN <span className="text-blue-600">ENGINEERING</span>
             </h1>
-            <p className="text-lg mb-8 text-gray-600">
+            <p className="text-xl mb-8 text-gray-600">
               We provide comprehensive engineering solutions with innovative approaches
               and cutting-edge technology to meet your project needs.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto text-xl">
               <div className="text-left">
                 <ul className="space-y-2">
                   <li className="flex items-center">✔️ Every Project Is Guaranteed</li>
@@ -34,6 +34,11 @@ export default function HomePage() {
                   <li className="flex items-center">✔️ Sustainable Solutions</li>
                 </ul>
               </div>
+            </div>
+          </div>
+          <div>
+            <div className="text-left py-5">
+                <img className="w-[400px] h-[500px] rounded-2xl" src="https://picsum.photos/800/1300?random=1"/>
             </div>
           </div>
         </div>
