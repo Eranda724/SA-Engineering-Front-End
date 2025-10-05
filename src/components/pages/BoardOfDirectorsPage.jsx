@@ -4,7 +4,7 @@ import { Layout } from '../common'
 const BoardOfDirectorsPage = () => {
   return (
     <Layout pageTitle="Board of Directors">
-      <div className="w-full h-[540px]">
+      <div className="w-full h-[570px]">
         <img
           className="w-full h-full object-cover rounded-b-xl"
           src="/src/assets/Bord Directors.jpg"
