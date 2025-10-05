@@ -10,7 +10,7 @@ const Footer = () => {
         height: '282px',
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 py-8 h-full relative">
+      <div className="max-w-9xl mx-auto px-15 py-8 h-full relative">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 h-full">
           {/* Left Column - Logo & Contact */}
           <div className="space-y-4">
@@ -165,7 +165,7 @@ const Footer = () => {
                 aria-label="Email address"
                 type="email"
                 placeholder="Enter your mail..."
-                className="w-[510px] h-[40px] rounded-l-[2px] px-4 text-sm placeholder:text-sm focus:outline-none"
+                className="w-[510px] h-[40px] border border-black rounded-l-[2px] px-4 text-sm placeholder:text-sm focus:outline-none"
               />
 
               <button
@@ -196,7 +196,7 @@ const Footer = () => {
             style={{
               fontFamily: '"Abhaya Libre", serif',
               fontWeight: 800,
-              fontSize: '9.17px',
+              fontSize: '15px',
               lineHeight: '100%',
               letterSpacing: '0%',
               color: 'rgba(0,0,0,0.8)',

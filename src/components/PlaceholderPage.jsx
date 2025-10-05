@@ -2,8 +2,9 @@ import React from 'react'
 import Layout from './Layout'
 
 const PlaceholderPage = ({ title, children }) => {
+  const bgColor = title === 'Home' ? 'bg-black' : 'bg-white'
   return (
-    <Layout pageTitle={title}>
+    <Layout pageTitle={title} bgColor={bgColor}>
       <div className="flex items-center justify-center py-24">
         <div className="text-center px-4">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">{title}</h1>
@@ -16,5 +17,3 @@ const PlaceholderPage = ({ title, children }) => {
 }
 
 export default PlaceholderPage
-
-
