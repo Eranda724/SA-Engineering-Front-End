@@ -3,7 +3,8 @@ import { Routes, Route, Navigate } from 'react-router-dom'
 import { 
   EngineeringServicesPage, 
   PlaceholderPage, 
-  HomePage 
+  HomePage, 
+  BoardOfDirectorsPage
 } from './components/pages'
 
 function App() {
