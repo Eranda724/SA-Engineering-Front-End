@@ -1,13 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation, Link } from 'react-router-dom'
 
 const Header = ({
   bgGradient = 'from-brand-purple-dark via-brand-purple-medium to-brand-purple-light',
   textColor = 'text-text-light',
   pageTitle = 'Engineering Services',
-  changePage,
 }) => {
   const navigate = useNavigate()
+  const location = useLocation()
+  const isHome = location.pathname === '/'
+  const headerTextColor = isHome ? 'text-white font-bold' : textColor
   const [showWhoWeAre, setShowWhoWeAre] = useState(false)
   const [showWhatWeDo, setShowWhatWeDo] = useState(false)
 
@@ -33,27 +35,35 @@ const Header = ({
 
   return (
     <header
-      className={`w-full bg-gradient-to-b ${bgGradient} ${textColor} rounded-t-xl overflow-hidden`}
-      style={{
-        background:
-          'linear-gradient(180deg, #110C4D 0%, #311DA1 50%, #8FABFF 100%)',
-      }}
+      className={`w-full ${
+        isHome
+          ? 'bg-transparent absolute top-0 left-0 right-0 z-10'
+          : `bg-gradient-to-b ${bgGradient}`
+      } ${headerTextColor} overflow-hidden`}
+      style={
+        isHome
+          ? {}
+          : {
+              background:
+                'linear-gradient(180deg, #110C4D 0%, #311DA1 22%, #8FABFF 92%)',
+            }
+      }
     >
       <div
-        className="max-w-7xl mx-auto px-4 py-6 header-hero-container"
+        className="max-w-8xl mx-auto px-10 py-6 header-hero-container"
         style={{ height: '239px' }}
       >
         <div className="flex items-center justify-between mb-3">
-          <div className="flex items-center gap-3">
+          <Link to="/" className="flex items-center">
             <img src="src/assets/icon.png" alt="Icon" />
             <div className="flex flex-col">
               <span className="text-lg font-bold leading-tight">
-                SA Engineers
+                SA Engineering
               </span>
             </div>
-          </div>
+          </Link>
 
-          <div className="flex items-center gap-6 text-sm">
+          <div className="flex items-center gap-2 md:gap-6 text-sm">
             <button
               onClick={() => navigate('/investors')}
               className="hover:text-brand-cyan transition-colors"
@@ -105,8 +115,8 @@ const Header = ({
           </div>
         </div>
 
-        <div className="flex justify-center border-t border-white/20 pt-4">
-          <nav className="flex items-center gap-8">
+        <div className="flex justify-center md:justify-end border-t border-white/20 pt-4">
+          <nav className="flex items-center gap-4 md:gap-8">
             <div className="relative" ref={whoWeAreRef}>
               <button
                 onClick={(e) => {
