@@ -4,11 +4,12 @@ import { Layout } from '../common'
 const BoardOfDirectorsPage = () => {
   return (
     <Layout pageTitle="Board of Directors">
-      <div className="flex items-center justify-center py-24">
-        <div className="text-center px-4">
-          <h1 className="text-4xl font-bold text-gray-800 mb-4">Board of Directors</h1>
-          <p className="text-gray-600">This page is under construction....</p>
-        </div>
+      <div className="w-full h-screen">
+        <img
+          className="w-full h-full object-cover rounded-b-xl"
+          src="/src/assets/Bord Directors.jpg"
+          alt="Board of Directors"
+        />
       </div>
     </Layout>
   )
