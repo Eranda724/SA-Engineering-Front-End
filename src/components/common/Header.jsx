@@ -4,7 +4,6 @@ import { useNavigate, useLocation, Link } from 'react-router-dom'
 const Header = ({
   bgGradient = 'from-brand-purple-dark via-brand-purple-medium to-brand-purple-light',
   textColor = 'text-text-light',
-  pageTitle = 'Engineering Services',
 }) => {
   const navigate = useNavigate()
   const location = useLocation()
@@ -39,19 +38,19 @@ const Header = ({
         isHome
           ? 'bg-transparent absolute top-0 left-0 right-0 z-50'
           : `bg-gradient-to-b ${bgGradient}`
-      } ${headerTextColor} overflow-hidden`}
+      } ${headerTextColor}`}
       style={
         isHome
           ? { background: 'transparent' }
           : {
               background:
-                'linear-gradient(180deg, #110C4D 0%, #311DA1 22%, #8FABFF 92%)',
+                'linear-gradient(180deg, #110C4D 0%, #311DA1 22%, #8FABFF 95%)',
             }
       }
     >
       <div
         className="max-w-8xl mx-auto px-10 py-6 header-hero-container"
-        style={{ height: '239px' }}
+        style={{ height: '180px' }}
       >
         <div className="flex items-center justify-between mb-3">
           <Link to="/" className="flex items-center">
@@ -65,58 +64,41 @@ const Header = ({
 
           <div className="flex items-center gap-2 md:gap-6 text-sm">
             <button
+              onClick={() => navigate('/')}
+              className="hover:text-brand-cyan transition-colors font-bold"
+            >
+              Home
+            </button>
+            <button
               onClick={() => navigate('/investors')}
-              className="hover:text-brand-cyan transition-colors"
+              className="hover:text-brand-cyan transition-colors font-bold"
             >
               Investors
             </button>
             <button
               onClick={() => navigate('/sustainability')}
-              className="hover:text-brand-cyan transition-colors"
+              className="hover:text-brand-cyan transition-colors font-bold"
             >
               Sustainability
             </button>
             <button
               onClick={() => navigate('/news')}
-              className="hover:text-brand-cyan transition-colors"
+              className="hover:text-brand-cyan transition-colors font-bold"
             >
               News & Notification
             </button>
             <button
               onClick={() => navigate('/join')}
-              className="hover:text-brand-cyan transition-colors"
+              className="hover:text-brand-cyan transition-colors font-bold"
             >
               Join
-            </button>
-            <a href="#facebook" className="hover:opacity-80 transition-opacity">
-              <img src="src\assets\fb.png" alt="Facebook" className="w-6 h-4" />
-            </a>
-            <a href="#linkedin" className="hover:opacity-80 transition-opacity">
-              <img
-                src="src\assets\linked.png"
-                alt="LinkedIn"
-                className="w-4 h-4"
-              />
-            </a>
-            <a href="#youtube" className="hover:opacity-80 transition-opacity">
-              <img
-                src="src\assets\youtube.png"
-                alt="YouTube"
-                className="w-4 h-4"
-              />
-            </a>
-            <button className="hover:opacity-80 transition-opacity">
-              <img
-                src="src\assets\search.png"
-                alt="Search"
-                className="w-4 h-4"
-              />
             </button>
           </div>
         </div>
 
         <div className="flex justify-center md:justify-end border-t border-white/20 pt-4">
-          <nav className="flex items-center gap-4 md:gap-8">
+          <nav className="flex items-center gap-4 md:gap-12">
+            {/* Who We Are Dropdown */}
             <div className="relative" ref={whoWeAreRef}>
               <button
                 onClick={(e) => {
@@ -129,15 +111,24 @@ const Header = ({
                 <span>Who We Are</span>
                 <span className="text-sm">▼</span>
               </button>
+
               {showWhoWeAre && (
-                <div className="absolute top-full left-0 mt-2 bg-white text-gray-800 rounded shadow-lg py-2 min-w-[150px] z-50">
+                <div
+                  className={`absolute top-full left-0 mt-2 rounded shadow-lg py-2 min-w-[180px] z-50 ${
+                    isHome
+                      ? 'backdrop-blur-md bg-white/10 text-white font-semibold'
+                      : 'bg-white text-black font-bold'
+                  }`}
+                >
                   <button
                     onClick={() => {
                       setShowWhoWeAre(false)
                       setShowWhatWeDo(false)
                       navigate('/about')
                     }}
-                    className="block px-4 py-2 hover:bg-gray-100 w-full text-left"
+                    className={`block px-4 py-2 w-full text-left text-sm whitespace-nowrap ${
+                      isHome ? 'hover:bg-white/20' : 'hover:bg-gray-200'
+                    }`}
                   >
                     About Us
                   </button>
@@ -147,7 +138,9 @@ const Header = ({
                       setShowWhatWeDo(false)
                       navigate('/team')
                     }}
-                    className="block px-4 py-2 hover:bg-gray-100 w-full text-left"
+                    className={`block px-4 py-2 w-full text-left text-sm whitespace-nowrap ${
+                      isHome ? 'hover:bg-white/20' : 'hover:bg-gray-200'
+                    }`}
                   >
                     Our Team
                   </button>
@@ -157,7 +150,9 @@ const Header = ({
                       setShowWhatWeDo(false)
                       navigate('/values')
                     }}
-                    className="block px-4 py-2 hover:bg-gray-100 w-full text-left"
+                    className={`block px-4 py-2 w-full text-left text-sm whitespace-nowrap ${
+                      isHome ? 'hover:bg-white/20' : 'hover:bg-gray-200'
+                    }`}
                   >
                     Our Values
                   </button>
@@ -165,6 +160,7 @@ const Header = ({
               )}
             </div>
 
+            {/* What We Do Dropdown */}
             <div className="relative" ref={whatWeDoRef}>
               <button
                 onClick={(e) => {
@@ -177,15 +173,24 @@ const Header = ({
                 <span>What We Do</span>
                 <span className="text-sm">▼</span>
               </button>
+
               {showWhatWeDo && (
-                <div className="absolute top-full left-0 mt-2 bg-white text-gray-800 rounded shadow-lg py-2 min-w-[180px] z-50">
+                <div
+                  className={`absolute top-full left-0 mt-2 rounded shadow-lg py-2 min-w-[180px] z-50 ${
+                    isHome
+                      ? 'backdrop-blur-md bg-white/10 text-white font-semibold'
+                      : 'bg-white text-black font-bold'
+                  }`}
+                >
                   <button
                     onClick={() => {
                       setShowWhoWeAre(false)
                       setShowWhatWeDo(false)
                       navigate('/engineering-services')
                     }}
-                    className="block px-4 py-2 hover:bg-gray-100 w-full text-left"
+                    className={`block px-4 py-2 w-full text-left text-sm whitespace-nowrap ${
+                      isHome ? 'hover:bg-white/20' : 'hover:bg-gray-200'
+                    }`}
                   >
                     Engineering Services
                   </button>
@@ -195,7 +200,9 @@ const Header = ({
                       setShowWhatWeDo(false)
                       navigate('/consulting')
                     }}
-                    className="block px-4 py-2 hover:bg-gray-100 w-full text-left"
+                    className={`block px-4 py-2 w-full text-left text-sm whitespace-nowrap ${
+                      isHome ? 'hover:bg-white/20' : 'hover:bg-gray-200'
+                    }`}
                   >
                     Consulting
                   </button>
@@ -205,7 +212,9 @@ const Header = ({
                       setShowWhatWeDo(false)
                       navigate('/projects')
                     }}
-                    className="block px-4 py-2 hover:bg-gray-100 w-full text-left"
+                    className={`block px-4 py-2 w-full text-left text-sm whitespace-nowrap ${
+                      isHome ? 'hover:bg-white/20' : 'hover:bg-gray-200'
+                    }`}
                   >
                     Projects
                   </button>
@@ -213,6 +222,7 @@ const Header = ({
               )}
             </div>
 
+            {/* Contact Us */}
             <button
               onClick={() => {
                 setShowWhoWeAre(false)
@@ -225,7 +235,6 @@ const Header = ({
             </button>
           </nav>
         </div>
-        <h1 className="header-title">{pageTitle}</h1>
       </div>
     </header>
   )

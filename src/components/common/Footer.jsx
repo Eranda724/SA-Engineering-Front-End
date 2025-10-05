@@ -6,7 +6,7 @@ const Footer = () => {
       className="w-full mt-auto"
       style={{
         background:
-          'linear-gradient(180deg, #FFFFFF 28%, #C8C8C8 60%, #2F2F2F 100%)',
+          'linear-gradient(180deg, #FFFFFF 15%, #C8C8C8 50%, #2F2F2F 100%)',
         height: '282px',
       }}
     >
