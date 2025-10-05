@@ -147,7 +147,7 @@ export default function HomePage() {
 
             {/* Service "tabs" */}
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-              <ServiceCard highlight label="Roofing" icon={<RoofIcon className="h-6 w-6 text-white" />} />
+              <ServiceCard label="Roofing" icon={<RoofIcon className="h-6 w-6 text-white" />} />
               <ServiceCard label="Gutters" icon={<GutterIcon className="h-6 w-6 text-white" />} />
               <ServiceCard label="Siding" icon={<SidingIcon className="h-6 w-6 text-white" />} />
               <ServiceCard label="Windows" icon={<WindowIcon className="h-6 w-6 text-white" />} />
