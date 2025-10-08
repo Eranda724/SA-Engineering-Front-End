@@ -6,6 +6,8 @@ import {
   HomePage,
   OurTeamPage,
   InvestorsPage, 
+  NewsNotificationPage,
+  ConstructionProjectsPage,
 } from './components/pages'
 
 function App() {
@@ -16,11 +18,11 @@ function App() {
       <Route path="/values" element={<PlaceholderPage title="Our Values" />} />
       <Route path="/engineering-services" element={<EngineeringServicesPage />} />
       <Route path="/consulting" element={<PlaceholderPage title="Consulting" />} />
-      <Route path="/projects" element={<PlaceholderPage title="Projects" />} />
+      <Route path="/projects" element={<ConstructionProjectsPage />} />
       <Route path="/contact" element={<PlaceholderPage title="Contact Us" />} />
       <Route path="/sustainability" element={<PlaceholderPage title="Sustainability" />} />
       <Route path="/join" element={<PlaceholderPage title="Join" />} />
-      <Route path="/news" element={<PlaceholderPage title="News & Notification" />} />
+      <Route path="/news" element={<NewsNotificationPage />} />
       <Route path="/investors" element={<InvestorsPage />} />
       <Route path="/team" element={<OurTeamPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />
