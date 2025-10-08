@@ -8,21 +8,21 @@ const Carousel = () => {
   const slides = [
     {
       id: 1,
-      image: "https://picsum.photos/1600/900?random=1",
+      image: "src/assets/home/home_cas_1.jpg",
       title: "Engineering Excellence",
       description: "We provide world-class engineering solutions with innovative approaches and cutting-edge technology to meet your project needs.",
       buttonText: "Learn More"
     },
     {
       id: 2,
-      image: "https://picsum.photos/1600/900?random=2",
+      image: "src/assets/home/home_cas_2.jpg",
       title: "Sustainable Solutions",
       description: "Committed to environmental responsibility and sustainable engineering practices for a better tomorrow.",
       buttonText: "Our Services"
     },
     {
       id: 3,
-      image: "https://picsum.photos/1600/900?random=3",
+      image: "src/assets/home/home_cas_3.jpg",
       title: "Expert Team",
       description: "Our experienced professionals bring decades of expertise to deliver exceptional results for every project.",
       buttonText: "Meet Our Team"
@@ -61,7 +61,7 @@ const Carousel = () => {
   };
 
   return (
-    <div className="relative w-full h-screen rounded-xl overflow-hidden">
+    <div className="relative w-full h-screen rounded-b-xl overflow-hidden">
       {/* Slides Container */}
       
       <div className="relative h-full ">

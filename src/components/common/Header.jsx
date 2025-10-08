@@ -50,7 +50,7 @@ const Header = ({
     >
       <div
         className="max-w-8xl mx-auto px-10 py-6 header-hero-container"
-        style={{ height: '180px' }}
+        style={{ height: '150px' }}
       >
         <div className="flex items-center justify-between mb-3">
           <Link to="/" className="flex items-center">
