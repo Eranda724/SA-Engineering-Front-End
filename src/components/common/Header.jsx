@@ -36,7 +36,7 @@ const Header = ({
     <header
       className={`w-full ${
         isHome
-          ? 'bg-transparent absolute top-0 left-0 right-0 z-50'
+          ? 'backdrop-blur-md bg-white/10 absolute top-0 left-0 right-0 z-50'
           : `bg-gradient-to-b ${bgGradient}`
       } ${headerTextColor}`}
       style={
@@ -53,8 +53,10 @@ const Header = ({
         style={{ height: '150px' }}
       >
         <div className="flex items-center justify-between mb-3">
-          <Link to="/" className="flex items-center">
-            <img src="src/assets/icon.png" alt="Icon" className="w-10 h-10" />
+          <Link to="/" className="flex items-center gap-2">
+            <div className="bg-white rounded-full p-0.5">
+              <img src="src/assets/icon.png" alt="Icon" className="w-12 h-12" />
+            </div>
             <div className="flex flex-col">
               <span className="text-lg font-bold leading-tight">
                 SA Engineering
@@ -62,7 +64,7 @@ const Header = ({
             </div>
           </Link>
 
-          <div className="flex items-center gap-2 md:gap-6 text-sm">
+          <div className="flex items-center gap-4 md:gap-8 text-font-medium">
             <button
               onClick={() => navigate('/')}
               className="hover:text-brand-cyan transition-colors font-bold"
@@ -75,23 +77,17 @@ const Header = ({
             >
               Investors
             </button>
-            <button
+            {/* <button
               onClick={() => navigate('/sustainability')}
               className="hover:text-brand-cyan transition-colors font-bold"
             >
               Sustainability
-            </button>
+            </button> */}
             <button
               onClick={() => navigate('/news')}
               className="hover:text-brand-cyan transition-colors font-bold"
             >
               News & Notification
-            </button>
-            <button
-              onClick={() => navigate('/join')}
-              className="hover:text-brand-cyan transition-colors font-bold"
-            >
-              Join
             </button>
           </div>
         </div>
