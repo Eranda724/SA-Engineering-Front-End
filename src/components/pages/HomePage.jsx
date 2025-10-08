@@ -27,10 +27,10 @@ const BoilerIcon = ({ className = "h-6 w-6" }) => (
   </svg>
 );
 
-const WaterTreatmentIcon = ({ className = "h-6 w-6" }) => (
+const ConstructionIcon = ({ className = "h-6 w-6" }) => (
   <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M4 6h16v2H4z" />
-    <path d="M6 10v10h12V10" strokeLinecap="round" />
+    <path d="M6 6l12 12" strokeLinecap="round" strokeLinejoin="round" />
+    <path d="M18 6L6 18" strokeLinecap="round" strokeLinejoin="round" />
   </svg>
 );
 
@@ -90,19 +90,19 @@ const ServiceCard = ({ icon, label, onClick, highlight = false }) => (
 );
 
 export default function HomePage() {
-  const [selectedService, setSelectedService] = useState(null);
+  const [selectedService, setSelectedService] = useState("Construction");
 
   const serviceDetails = {
+    Construction: {
+      title: "Construction Services",
+      description:
+        "Savinda Echo Holdings provides high-quality civil engineering services, including design and construction of steel buildings, fabrication, and site development. Our team ensures efficient, sustainable, and cost-effective solutions.",
+      image: "src/assets/home/home_dy1.jpg",
+    },
     Boiler: {
       title: "Boiler Systems",
       description:
         "We offer comprehensive services for steam boilers, thermic heaters, pre-fabricated chimneys, and hot water generators. Our installation and maintenance services ensure efficiency and sustainability.",
-      image: "src/assets/home/home_dy1.jpg",
-    },
-    "Water Treatment": {
-      title: "Water Treatment Plants",
-      description:
-        "Our expertise includes softeners, reverse osmosis, desalination, and brackish water filtration. We design, install, and maintain efficient water treatment systems.",
       image: "src/assets/home/home_dy2.jpg",
     },
     "Swimming Pools": {
@@ -132,7 +132,7 @@ export default function HomePage() {
   };
 
   const handleServiceClick = (service) => {
-    setSelectedService(serviceDetails[service]);
+    setSelectedService(service);
   };
 
   return (
@@ -150,7 +150,7 @@ export default function HomePage() {
               </h1>
               <p className="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl">
                 Savinda Echo Holdings provides a range of engineering solutions. Explore our services
-                for boilers, water treatment, swimming pools, and more.
+                for boilers, construction, swimming pools, and more.
               </p>
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-5 text-base sm:text-lg">
                 <Feature>Reliable Engineering Service</Feature>
@@ -184,6 +184,7 @@ export default function HomePage() {
                   label={service}
                   icon={<BoilerIcon className="h-6 w-6 text-white" />}
                   onClick={() => handleServiceClick(service)}
+                  highlight={selectedService === service}
                 />
               ))}
             </div>
@@ -197,15 +198,15 @@ export default function HomePage() {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Left: Service description */}
                 <div>
-                  <h2 className="text-3xl font-bold text-gray-900">{selectedService.title}</h2>
-                  <p className="mt-4 text-gray-600">{selectedService.description}</p>
+                  <h2 className="text-3xl font-bold text-gray-900">{serviceDetails[selectedService].title}</h2>
+                  <p className="mt-4 text-gray-600">{serviceDetails[selectedService].description}</p>
                 </div>
 
                 {/* Right: Service Image */}
                 <div>
                   <img
-                    src={selectedService.image}
-                    alt={selectedService.title}
+                    src={serviceDetails[selectedService].image}
+                    alt={serviceDetails[selectedService].title}
                     className="w-full h-[340px] sm:h-[420px] lg:h-[520px] object-cover rounded-3xl shadow-lg"
                   />
                 </div>
