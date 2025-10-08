@@ -18,40 +18,46 @@ const ArrowUpRight = ({ className = "h-4 w-4" }) => (
 );
 
 /* Simple inline service icons (lightweight placeholders) */
-const RoofIcon = ({ className = "h-6 w-6" }) => (
+const BoilerIcon = ({ className = "h-6 w-6" }) => (
   <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2">
     <path d="M3 12l9-7 9 7" strokeLinecap="round" strokeLinejoin="round" />
     <path d="M5 10v10h14V10" />
   </svg>
 );
-const GutterIcon = ({ className = "h-6 w-6" }) => (
+
+const WaterTreatmentIcon = ({ className = "h-6 w-6" }) => (
   <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M3 6h18v4H3z" />
-    <path d="M6 10v8a3 3 0 0 0 3 3h6" strokeLinecap="round" />
+    <path d="M4 6h16v2H4z" />
+    <path d="M6 10v10h12V10" strokeLinecap="round" />
   </svg>
 );
-const SidingIcon = ({ className = "h-6 w-6" }) => (
+
+const SwimmingPoolIcon = ({ className = "h-6 w-6" }) => (
   <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M3 7h18M3 12h18M3 17h18" strokeLinecap="round" />
+    <path d="M4 7h16v2H4z" />
+    <path d="M4 11h16v2H4z" />
+    <path d="M4 15h16v2H4z" />
   </svg>
 );
-const WindowIcon = ({ className = "h-6 w-6" }) => (
+
+const WasteWaterIcon = ({ className = "h-6 w-6" }) => (
   <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2">
-    <rect x="5" y="5" width="14" height="14" rx="1" />
-    <path d="M12 5v14M5 12h14" />
+    <path d="M5 10h14v8H5z" />
+    <path d="M12 2v6m0 0l3-3m-3 3L9 5" strokeLinecap="round" />
   </svg>
 );
-const PaintIcon = ({ className = "h-6 w-6" }) => (
+
+const MachineriesIcon = ({ className = "h-6 w-6" }) => (
   <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M4 13h10a2 2 0 0 0 2-2V5H6a2 2 0 0 0-2 2v6z" />
-    <path d="M14 5v4a2 2 0 0 0 2 2h4" />
-    <path d="M14 13v7" />
+    <path d="M4 7h16v2H4z" />
+    <path d="M6 10v10h12V10" strokeLinecap="round" />
   </svg>
 );
-const InsulationIcon = ({ className = "h-6 w-6" }) => (
+
+const IndustrialIcon = ({ className = "h-6 w-6" }) => (
   <svg viewBox="0 0 24 24" className={className} fill="none" stroke="currentColor" strokeWidth="2">
-    <rect x="4" y="4" width="16" height="16" rx="2" />
-    <path d="M8 20V4M16 20V4" />
+    <path d="M3 6h18v2H3z" />
+    <path d="M6 10v10h12V10" strokeLinecap="round" />
   </svg>
 );
 
@@ -84,7 +90,7 @@ const ServiceCard = ({ icon, label, highlight = false }) => (
 
 export default function HomePage() {
   return (
-    <Layout pageTitle="">
+    <Layout pageTitle="Savinda Echo Holdings">
       <div className="w-full flex flex-col">
         {/* First Section: Hero / Carousel */}
         <Carousel />
@@ -94,27 +100,26 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-gray-900">
-                TRY OUR TEAM OF EXPERTS IN <span className="text-blue-600">LIVERPOOL</span>
+                TRY OUR TEAM OF EXPERTS IN <span className="text-blue-600">SRI LANKA</span>
               </h1>
               <p className="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl">
-                Aliquam rhoncus ut urna ac vulputate. Aenean sit amet mauris tellus.
-                Suspendisse a condimentum est. Nulla fringilla interdum velit quis
-                vulputate. Quisque mattis, risus ut viverra molestie, ipsum lorem
-                tincidunt ante, a tempor ipsum quam non odio.
+                With years of experience in various engineering fields, Savinda Echo Holdings
+                offers innovative solutions in boiler systems, water treatment plants, and more.
+                We strive for sustainability and excellence in every project.
               </p>
               <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-5 text-base sm:text-lg">
-                <Feature>Every Job Is Guaranteed</Feature>
-                <Feature>Locally Based, Family Run Firm</Feature>
-                <Feature>Only High Quality Materials</Feature>
-                <Feature>Trusted 5 Star Rated Company</Feature>
-                <Feature>Free Estimates For Any Job</Feature>
-                <Feature>Insurance Work Undertaken</Feature>
+                <Feature>Reliable Engineering Service</Feature>
+                <Feature>Expertise in Energy Solutions</Feature>
+                <Feature>Innovative System Design</Feature>
+                <Feature>Highly Skilled Professionals</Feature>
+                <Feature>Modern Engineering Practices</Feature>
+                <Feature>Committed to Client Satisfaction</Feature>
               </div>
             </div>
             <div className="lg:col-span-5">
               <img
-                src="https://picsum.photos/800/1200?random=12"
-                alt="Modern building exterior"
+                src="src/assets/home/home_cas_4.jpg"
+                alt="Engineering Solutions"
                 className="w-full h-[340px] sm:h-[420px] lg:h-[520px] object-cover rounded-3xl shadow-lg"
               />
             </div>
@@ -122,7 +127,7 @@ export default function HomePage() {
         </section>
 
         {/* Third Section: Call to action (kept) */}
-        {/* <section className="w-full py-16 bg-blue-50">
+        <section className="w-full py-16 bg-blue-50">
           <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-gray-900">Ready to Get Started?</h2>
             <p className="mt-3 text-lg text-gray-600">Contact us today for a free consultation.</p>
@@ -130,7 +135,7 @@ export default function HomePage() {
               Get In Touch <ArrowUpRight />
             </button>
           </div>
-        </section> */}
+        </section>
 
         {/* ---- Final Two Sections (combined “Services” area) ---- */}
         <section className="w-full bg-gradient-to-b from-gray-900 via-gray-800 to-gray-700 text-white">
@@ -141,18 +146,19 @@ export default function HomePage() {
               ALL UNDER ONE <br className="hidden sm:block" /> GONE GOOD ROOF
             </h3>
             <p className="mt-4 max-w-2xl text-gray-300">
-              Our roots have always been in roofing, but over the years we&apos;ve evolved
-              into a comprehensive home services provider.
+              Savinda Echo Holdings offers a variety of essential engineering services, including
+              boilers, water treatment, swimming pools, waste-water systems, industrial equipment,
+              and more.
             </p>
 
             {/* Service "tabs" */}
             <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-              <ServiceCard label="Roofing" icon={<RoofIcon className="h-6 w-6 text-white" />} />
-              <ServiceCard label="Gutters" icon={<GutterIcon className="h-6 w-6 text-white" />} />
-              <ServiceCard label="Siding" icon={<SidingIcon className="h-6 w-6 text-white" />} />
-              <ServiceCard label="Windows" icon={<WindowIcon className="h-6 w-6 text-white" />} />
-              <ServiceCard label="Painting" icon={<PaintIcon className="h-6 w-6 text-white" />} />
-              <ServiceCard label="Insulation" icon={<InsulationIcon className="h-6 w-6 text-white" />} />
+              <ServiceCard label="Boilers" icon={<BoilerIcon className="h-6 w-6 text-white" />} />
+              <ServiceCard label="Water Treatment" icon={<WaterTreatmentIcon className="h-6 w-6 text-white" />} />
+              <ServiceCard label="Swimming Pools" icon={<SwimmingPoolIcon className="h-6 w-6 text-white" />} />
+              <ServiceCard label="Waste-Water Treatment" icon={<WasteWaterIcon className="h-6 w-6 text-white" />} />
+              <ServiceCard label="Machinery Automation" icon={<MachineriesIcon className="h-6 w-6 text-white" />} />
+              <ServiceCard label="Industrial Equipment" icon={<IndustrialIcon className="h-6 w-6 text-white" />} />
             </div>
           </div>
 
@@ -164,22 +170,21 @@ export default function HomePage() {
                 <div className="p-6 sm:p-10">
                   <h4 className="text-2xl sm:text-3xl font-extrabold text-gray-900">ROOF REPAIR WORKS</h4>
                   <p className="mt-4 text-gray-600">
-                    Aliquam rhoncus ut urna ac vulputate. Aenean sit amet mauris tellus.
-                    Suspendisse a condimentum est. Nulla fringilla interdum velit quis
-                    vulputate.
+                    We provide professional roof repair works, ensuring quality and longevity for
+                    every client.
                   </p>
                   <ul className="mt-6 space-y-3">
                     <li className="flex items-start gap-3">
                       <CircledCheckIcon className="h-5 w-5 text-amber-500 mt-0.5" />
-                      <span className="text-gray-800">Aliquam rhoncus ut urna ac vulputate.</span>
+                      <span className="text-gray-800">High-quality materials used for repairs.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CircledCheckIcon className="h-5 w-5 text-amber-500 mt-0.5" />
-                      <span className="text-gray-800">Nulla fringilla interdum velit quis vulputate.</span>
+                      <span className="text-gray-800">Expert technicians with years of experience.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CircledCheckIcon className="h-5 w-5 text-amber-500 mt-0.5" />
-                      <span className="text-gray-800">Quisque mattis, risus ut viverra molestie.</span>
+                      <span className="text-gray-800">Sustainable, long-lasting roof solutions.</span>
                     </li>
                   </ul>
 
@@ -191,8 +196,8 @@ export default function HomePage() {
                 {/* Right image */}
                 <div className="relative">
                   <img
-                    src="src\assets\home\home_roof.jpg"
-                    alt="Roof detail"
+                    src="src/assets/home/home_cas_2.jpg"
+                    alt="Roof repair detail"
                     className="h-full w-full object-cover"
                   />
                 </div>
