@@ -49,10 +49,12 @@ const Footer = () => {
             </h3>
             <address className="text-gray-600 text-sm not-italic">
               <p className="flex items-center mb-1">
-                <span className="text-red-600 mr-2">📍</span>Matara Branch
+                <span className="text-red-600 mr-2">📍</span>S A ENGINEERING,
+                Hakmana, Matara. Sri Lanka.
               </p>
               <p className="flex items-center mb-1">
-                <span className="text-red-600 mr-2">📍</span>Chilaw Branch
+                <span className="text-red-600 mr-2">📍</span>S A ENGINEERING.
+                Madampe, Chilaw. Sri Lanka.
               </p>
               <p className="flex items-center">
                 <span className="text-red-600 mr-2">📧</span>
