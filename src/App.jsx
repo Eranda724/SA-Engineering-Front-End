@@ -8,6 +8,7 @@ import {
   InvestorsPage, 
   NewsNotificationPage,
   ConstructionProjectsPage,
+  OurClientPage,
 } from './components/pages'
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Route path="/news" element={<NewsNotificationPage />} />
       <Route path="/investors" element={<InvestorsPage />} />
       <Route path="/team" element={<OurTeamPage />} />
+      <Route path="/client" element={<OurClientPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )

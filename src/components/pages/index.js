@@ -5,6 +5,8 @@ export { default as EngineeringServicesPage }
 from './EngineeringServicesPage';
 export { default as OurTeamPage }
 from './OurTeamPage';
+export { default as OurClientPage }
+from './OurClientPage';
 export { default as ConstructionProjectsPage }
 from './ConstructionProjectsPage';
 export { default as InvestorsPage }
