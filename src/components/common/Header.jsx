@@ -44,7 +44,7 @@ const Header = ({
           ? { background: 'transparent' }
           : {
               background:
-                'linear-gradient(180deg, #110C4D 0%, #311DA1 22%, #8FABFF 95%)',
+                'linear-gradient(180deg, #cb1f1fff 0%, #e86e6eff 22%, #eea6acff 95%)',
             }
       }
     >
@@ -54,7 +54,7 @@ const Header = ({
       >
         <div className="flex items-center justify-between mb-3">
           <Link to="/" className="flex items-center">
-            <img src="src/assets/icon.png" alt="Icon" />
+            <img src="src/assets/icon.png" alt="Icon" className="w-10 h-10" />
             <div className="flex flex-col">
               <span className="text-lg font-bold leading-tight">
                 SA Engineering
