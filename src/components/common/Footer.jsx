@@ -12,7 +12,7 @@ const Footer = () => {
     >
       <div className="max-w-9xl mx-auto px-15 py-8 h-full relative">
         {/* Top Section */}
-        <div className="flex justify-between items-center mb-6">
+        <div className="flex justify-between items-center mb-4">
           <div className="flex items-center space-x-2">
             <span className="text-2xl font-bold text-red-600">SA</span>
             <span className="text-2xl font-bold text-gray-800">
@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
 
         {/* Middle Section */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-6">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-2">
           <div>
             <h3 className="font-bold text-gray-800 uppercase mb-2">
               Head Office
@@ -49,10 +49,12 @@ const Footer = () => {
             </h3>
             <address className="text-gray-600 text-sm not-italic">
               <p className="flex items-center mb-1">
-                <span className="text-red-600 mr-2">📍</span>Matara Branch
+                <span className="text-red-600 mr-2">📍</span>S A ENGINEERING,
+                Hakmana, Matara. Sri Lanka.
               </p>
               <p className="flex items-center mb-1">
-                <span className="text-red-600 mr-2">📍</span>Chilaw Branch
+                <span className="text-red-600 mr-2">📍</span>S A ENGINEERING.
+                Madampe, Chilaw. Sri Lanka.
               </p>
               <p className="flex items-center">
                 <span className="text-red-600 mr-2">📧</span>
@@ -77,18 +79,17 @@ const Footer = () => {
           </div>
           <div className="flex flex-col items-end justify-center">
             <img
-              src="src/assets/qr.jpg"
+              src="src/assets/icon.png"
               alt="SA Engineering QR Code"
-              className="w-24 h-24 mb-2"
+              className="w-40 h-40"
             />
-            <p className="text-gray-600 text-sm">www.saholdings.lk</p>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-red-600 pt-4">
-          <div className="flex justify-between items-center">
-            <p className="text-black-600 text-sm items-center">
+        <div className="border-t border-red-600 pt-2">
+          <div className="flex items-center">
+            <p className="flex-1 text-center text-white font-bold text-sm">
               © 2025 S A Engineering | All Rights Reserved.
             </p>
             <div className="flex space-x-4">
