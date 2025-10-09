@@ -9,6 +9,7 @@ import {
   NewsNotificationPage,
   ConstructionProjectsPage,
   OurClientPage,
+  SustainablePage,
 } from './components/pages'
 
 function App() {
@@ -21,12 +22,13 @@ function App() {
       <Route path="/consulting" element={<PlaceholderPage title="Consulting" />} />
       <Route path="/projects" element={<ConstructionProjectsPage />} />
       <Route path="/contact" element={<PlaceholderPage title="Contact Us" />} />
-      <Route path="/sustainability" element={<PlaceholderPage title="Sustainability" />} />
+      <Route path="/sustainability" element={<SustainablePage title="Sustainability" />} />
       <Route path="/join" element={<PlaceholderPage title="Join" />} />
       <Route path="/news" element={<NewsNotificationPage />} />
       <Route path="/investors" element={<InvestorsPage />} />
       <Route path="/team" element={<OurTeamPage />} />
       <Route path="/client" element={<OurClientPage />} />
+      <Route path="/construction-projects" element={<ConstructionProjectsPage />} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )
