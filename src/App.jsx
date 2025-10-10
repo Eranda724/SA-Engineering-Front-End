@@ -10,13 +10,14 @@ import {
   ConstructionProjectsPage,
   OurClientPage,
   SustainablePage,
+  OurStoryPage,
 } from './components/pages'
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/about" element={<PlaceholderPage title="About Us" />} />
+      <Route path="/about" element={<OurStoryPage title="About Us" />} />
       <Route path="/values" element={<PlaceholderPage title="Our Values" />} />
       <Route path="/engineering-services" element={<EngineeringServicesPage />} />
       <Route path="/consulting" element={<PlaceholderPage title="Consulting" />} />
